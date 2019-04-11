@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using MvcEF.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MvcEF.Models;
+using MvcEfCore.Data;
 
 namespace MvcEF
 {
@@ -69,6 +71,7 @@ namespace MvcEF
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            SeedData.Initialize(app);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MvcEF.Models;
 
 namespace MvcEF.Data
 {
@@ -12,5 +13,7 @@ namespace MvcEF.Data
             : base(options)
         {
         }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Player> Players { get; set; }
     }
 }
